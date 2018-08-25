@@ -8,14 +8,20 @@ export const QuestionWrapper = styled.div`
   border-radius: 0.25rem;
   box-shadow: 0 0 ${rem(50)} 0 rgba(60,77,88,0.30);
 
-  padding: 1em;
+  padding: 2em 1em;
   margin: 0 auto;
   max-width: ${rem(600)};
 `
 
 export const Info = styled.p`
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+`
+
+export const Label = styled.label`
+  font-weight: 700;
+  margin-bottom: ${em(10)};
+  display: block;
 `
 
 export const Input = styled.input.attrs({
@@ -31,8 +37,6 @@ export const Input = styled.input.attrs({
   border: ${em(2)} solid transparent;
   border-radius: ${rem(4)};
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   display: block;
   max-width: ${em(80)};
 

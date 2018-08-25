@@ -3,6 +3,8 @@ import { injectGlobal } from 'styled-components'
 const baseStyles = () => injectGlobal`
   html {
     box-sizing: border-box;
+    height: 100%;
+    background: #fbfbfb;
   }
 
   *, *::before, *::after {

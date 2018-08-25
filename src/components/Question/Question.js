@@ -4,10 +4,15 @@ import {
   QuestionWrapper,
   Info,
   Input,
+  Label
 } from './questionStyles'
 
 class Question extends PureComponent {
   input = createRef()
+
+  randomNumber = () => {
+    return Math.floor(Math.random() * 10000);
+  }
 
   componentDidMount () {
     const { input } = this
@@ -22,14 +27,17 @@ class Question extends PureComponent {
       scoreHandler,
     } = this.props
 
-    const { input } = this
+    const { input, randomNumber } = this
+
+    const id = randomNumber()
 
     return (
       <QuestionWrapper>
         <Info>
           {index}) { question }
         </Info>
-        <Input onChange={scoreHandler} innerRef={input} />
+        <Label htmlFor={id}>Your answer: (0 - 5)</Label>
+        <Input id={id} onChange={scoreHandler} innerRef={input} />
       </QuestionWrapper>
     )
   }
