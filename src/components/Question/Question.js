@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react'
+import React, { PureComponent, createRef } from 'react'
 import PropTypes from 'prop-types'
 import {
   QuestionWrapper,
@@ -6,7 +6,7 @@ import {
   Input,
 } from './questionStyles'
 
-class Question extends Component {
+class Question extends PureComponent {
   input = createRef()
 
   componentDidMount () {

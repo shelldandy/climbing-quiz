@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Question from '../Question'
+import { QuizWrapper } from './quizStyles'
 
 class Quiz extends Component {
   state = {
@@ -23,7 +24,7 @@ class Quiz extends Component {
     const { updateScore } = this
     const { currentQuestion } = this.state
     return (
-      <div>
+      <QuizWrapper>
         <h1>Questions...</h1>
 
         <Question
@@ -31,7 +32,7 @@ class Quiz extends Component {
           index={currentQuestion + 1}
           scoreHandler={updateScore}
         />
-      </div>
+      </QuizWrapper>
     )
   }
 
