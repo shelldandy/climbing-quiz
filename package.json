@@ -30,7 +30,6 @@
   "crcf": [
     "nocss",
     "uppercase",
-    "jsx",
     "proptypes",
     "functional"
   ]

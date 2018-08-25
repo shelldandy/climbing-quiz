@@ -8,11 +8,13 @@ class Quiz extends Component {
     currentQuestion: 0,
   }
 
-  updateScore = points => {
-    const { score } = this.state
+  updateScore = event => {
+    const { score, currentQuestion } = this.state
+    const points = event.target.value
     const newScore = score + points
     this.setState({
-      score: newScore
+      score: newScore,
+      currentQuestion: currentQuestion + 1
     })
   }
 
@@ -24,15 +26,11 @@ class Quiz extends Component {
       <div>
         <h1>Questions...</h1>
 
-        { questions && questions.map((question, index) =>
-          <Question
-            key={index}
-            question={question}
-            index={index + 1}
-            currentQuestion={index === currentQuestion}
-            scoreHandler={updateScore}
-          />
-        ) }
+        <Question
+          question={questions[currentQuestion]}
+          index={currentQuestion + 1}
+          scoreHandler={updateScore}
+        />
       </div>
     )
   }
