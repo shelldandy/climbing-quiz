@@ -9,9 +9,14 @@ class Quiz extends Component {
     currentQuestion: 0,
   }
 
-  updateScore = event => {
+  /**
+   * Manage what happens when the users types their answer
+   * @param event ReactSyntheticEvent
+   * @param event.target HTMLNode
+   */
+  updateScore = ({ target }) => {
     const { score, currentQuestion } = this.state
-    const points = event.target.value
+    const points = target.value
     const newScore = score + points
     this.setState({
       score: newScore,
