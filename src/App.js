@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
+import Quiz from './components/Quiz'
+import baseStyles from './baseStyles'
 
-const App = () => <div>Hello World!</div>
+class App extends Component {
+  render () {
+    baseStyles();
+    return (
+      <Quiz />
+    )
+  }
+}
 
 export default hot(module)(App)
