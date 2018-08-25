@@ -7,6 +7,7 @@ export const QuestionWrapper = styled.div`
   background: #fff;
   border-radius: 0.25rem;
   box-shadow: 0 0 ${rem(50)} 0 rgba(60,77,88,0.30);
+
   padding: 1em;
   margin: 0 auto;
   max-width: ${rem(600)};
