@@ -1,10 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Question from '../Question'
 
-const Quiz = () => {
-  return <div>Quiz</div>;
-};
+const Quiz = ({ questions }) => (
+  <div>
+    <h1>Questions...</h1>
 
-Quiz.propTypes = {};
+    { questions && questions.map((question, index) =>
+      <Question key={index} question={question} index={index + 1} />
+    ) }
+  </div>
+);
 
-export default Quiz;
+Quiz.propTypes = {
+  questions: PropTypes.arrayOf(PropTypes.string)
+}
+
+export default Quiz
