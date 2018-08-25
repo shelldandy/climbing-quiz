@@ -1,5 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {
+  QuestionWrapper,
+  Info,
+  Input,
+} from './questionStyles'
 
 const Question = ({
   question,
@@ -7,7 +12,12 @@ const Question = ({
   scoreHandler,
   currentQuestion
 }) => currentQuestion && (
-  <p>{index}) { question }</p>
+  <QuestionWrapper>
+    <Info>
+      {index}) { question }
+    </Info>
+    <Input />
+  </QuestionWrapper>
 )
 
 Question.propTypes = {
