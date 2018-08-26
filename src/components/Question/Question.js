@@ -25,6 +25,7 @@ class Question extends PureComponent {
       question,
       index,
       scoreHandler,
+      currentAnswer,
     } = this.props
 
     const { input, randomNumber } = this
@@ -36,8 +37,17 @@ class Question extends PureComponent {
         <Info>
           {index}) { question }
         </Info>
-        <Label htmlFor={id}>Your answer: (0 - 5)</Label>
-        <Input id={id} onChange={scoreHandler} innerRef={input} />
+
+        <Label htmlFor={id}>
+          Your answer: (0 - 5)
+        </Label>
+
+        <Input
+          id={id}
+          onChange={scoreHandler}
+          innerRef={input}
+          value={currentAnswer}
+        />
       </QuestionWrapper>
     )
   }

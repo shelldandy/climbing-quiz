@@ -7,27 +7,30 @@ class Quiz extends Component {
   state = {
     score: 0,
     currentQuestion: 0,
+    currentAnswer: '',
   }
 
   /**
    * Manage what happens when the users types their answer
    * @param event ReactSyntheticEvent
-   * @param event.target HTMLNode
    */
-  updateScore = ({ target }) => {
-    const { score, currentQuestion } = this.state
-    const points = target.value
-    const newScore = score + points
-    this.setState({
-      score: newScore,
-      currentQuestion: currentQuestion + 1
-    })
+  updateScore = event => {
+    const ONLY_NUMBERS = /(\D|[6-9])/
+    const value = event.target.value
+    const newValue = value.replace(ONLY_NUMBERS,'')
+    const currentAnswer = Number(newValue)
+
+    this.setState({ currentAnswer })
   }
 
   render () {
     const { questions } = this.props
     const { updateScore } = this
-    const { currentQuestion } = this.state
+    const {
+      currentQuestion,
+      currentAnswer
+    } = this.state
+
     return (
       <QuizWrapper>
         <h1>Questions...</h1>
@@ -36,6 +39,7 @@ class Quiz extends Component {
           question={questions[currentQuestion]}
           index={currentQuestion + 1}
           scoreHandler={updateScore}
+          currentAnswer={currentAnswer}
         />
       </QuizWrapper>
     )

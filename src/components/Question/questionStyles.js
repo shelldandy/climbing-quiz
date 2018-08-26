@@ -28,6 +28,7 @@ export const Input = styled.input.attrs({
   type: 'num',
   placeholder: '0 - 5',
   required: true,
+  maxLength: 1,
 })`
   ${resetBtn}
   background: #dedede;
