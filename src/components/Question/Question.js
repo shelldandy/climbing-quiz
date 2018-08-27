@@ -25,7 +25,6 @@ class Question extends PureComponent {
       question,
       index,
       scoreHandler,
-      currentAnswer,
     } = this.props
 
     const { input, randomNumber } = this
@@ -44,9 +43,11 @@ class Question extends PureComponent {
 
         <Input
           id={id}
-          onInput={scoreHandler}
+          placeholder='0 - 5'
+          maxLength='1'
+          type='num'
+          onChange={scoreHandler}
           innerRef={input}
-          value={currentAnswer}
         />
       </QuestionWrapper>
     )

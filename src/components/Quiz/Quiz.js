@@ -7,7 +7,6 @@ class Quiz extends Component {
   state = {
     score: 0,
     currentQuestion: 0,
-    currentAnswer: '',
   }
 
   /**
@@ -18,7 +17,9 @@ class Quiz extends Component {
     const ONLY_NUMBERS = /(\D|[6-9])/
     const value = event.target.value
     const newValue = value.replace(ONLY_NUMBERS,'')
-    console.log({ newValue })
+
+    // Change the DOM we have state for everything else...
+    event.target.value = newValue
   }
 
   render () {
@@ -26,7 +27,6 @@ class Quiz extends Component {
     const { updateScore } = this
     const {
       currentQuestion,
-      currentAnswer
     } = this.state
 
     return (
@@ -37,7 +37,6 @@ class Quiz extends Component {
           question={questions[currentQuestion]}
           index={currentQuestion + 1}
           scoreHandler={updateScore}
-          currentAnswer={currentAnswer}
         />
       </QuizWrapper>
     )

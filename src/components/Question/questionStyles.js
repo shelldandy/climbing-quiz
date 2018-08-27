@@ -24,11 +24,7 @@ export const Label = styled.label`
   display: block;
 `
 
-export const Input = styled.input.attrs({
-  type: 'num',
-  placeholder: '0 - 5',
-  maxLength: 1,
-})`
+export const Input = styled.input`
   ${resetBtn}
   background: #dedede;
   font-size: ${rem(24)};
