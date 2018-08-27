@@ -44,7 +44,7 @@ class Question extends PureComponent {
 
         <Input
           id={id}
-          onChange={scoreHandler}
+          onInput={scoreHandler}
           innerRef={input}
           value={currentAnswer}
         />

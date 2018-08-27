@@ -18,9 +18,7 @@ class Quiz extends Component {
     const ONLY_NUMBERS = /(\D|[6-9])/
     const value = event.target.value
     const newValue = value.replace(ONLY_NUMBERS,'')
-    const currentAnswer = Number(newValue)
-
-    this.setState({ currentAnswer })
+    console.log({ newValue })
   }
 
   render () {
