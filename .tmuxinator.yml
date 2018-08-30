@@ -1,0 +1,4 @@
+name: climbing-quiz
+windows:
+  - editor: eval $EDITOR
+  - main: yarn start
