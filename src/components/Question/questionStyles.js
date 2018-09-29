@@ -18,25 +18,16 @@ export const Info = styled.p`
   margin-bottom: 2em;
 `
 
-export const Label = styled.label`
-  font-weight: 700;
-  margin-bottom: ${em(10)};
-  display: block;
+export const Options = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `
 
-export const Input = styled.input`
-  ${resetBtn}
-  background: #dedede;
-  font-size: ${rem(24)};
-  padding: 0.3em;
-  width: 100%;
-  border: ${em(2)} solid transparent;
-  border-radius: ${rem(4)};
-  text-align: center;
+export const Option = styled.button`
+  ${resetBtn};
+  font-size: ${rem(18)};
   display: block;
-  max-width: ${em(80)};
-
-  &:focus, &:active {
-    border-color: #4450B1;
-  }
+  padding: ${em(10)};
+  font-weight: 700;
 `

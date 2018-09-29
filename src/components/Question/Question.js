@@ -1,35 +1,18 @@
-import React, { PureComponent, createRef } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import {
   QuestionWrapper,
   Info,
-  Input,
-  Label
+  Options,
+  Option,
 } from './questionStyles'
 
 class Question extends PureComponent {
-  input = createRef()
-
-  randomNumber = () => {
-    return Math.floor(Math.random() * 10000);
-  }
-
-  componentDidMount () {
-    const { input } = this
-    const actualInput = input.current
-    actualInput.focus()
-  }
-
   render () {
     const {
       question,
       index,
-      scoreHandler,
     } = this.props
-
-    const { input, randomNumber } = this
-
-    const id = randomNumber()
 
     return (
       <QuestionWrapper>
@@ -37,27 +20,22 @@ class Question extends PureComponent {
           {index}) { question }
         </Info>
 
-        <Label htmlFor={id}>
-          Your answer: (0 - 5)
-        </Label>
-
-        <Input
-          id={id}
-          placeholder='0 - 5'
-          maxLength='1'
-          type='num'
-          onChange={scoreHandler}
-          innerRef={input}
-        />
+        <Options>
+          <Option>1</Option>
+          <Option>2</Option>
+          <Option>3</Option>
+          <Option>4</Option>
+          <Option>5</Option>
+        </Options>
       </QuestionWrapper>
     )
   }
-}
 
-Question.propTypes = {
-  question: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
-  scoreHandler: PropTypes.func.isRequired,
+  static propTypes = {
+    question: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    scoreHandler: PropTypes.func.isRequired,
+  }
 }
 
 export default Question
