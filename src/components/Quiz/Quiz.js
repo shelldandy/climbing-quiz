@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Question from '../Question'
 import { QuizWrapper } from './quizStyles'
 
-class Quiz extends Component {
+class Quiz extends PureComponent {
   state = {
     score: 0,
     currentQuestion: 0,
@@ -29,6 +29,8 @@ class Quiz extends Component {
       currentQuestion,
     } = this.state
 
+    const questionsLeft = questions.length - currentQuestion;
+
     return (
       <QuizWrapper>
         <h1>Questions...</h1>
@@ -38,6 +40,9 @@ class Quiz extends Component {
           index={currentQuestion + 1}
           scoreHandler={updateScore}
         />
+
+      <p>Just { questionsLeft } questions left...</p>
+
       </QuizWrapper>
     )
   }
