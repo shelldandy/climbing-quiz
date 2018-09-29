@@ -21,6 +21,7 @@ class Question extends PureComponent {
         </Info>
 
         <Options>
+          <Option>0</Option>
           <Option>1</Option>
           <Option>2</Option>
           <Option>3</Option>
