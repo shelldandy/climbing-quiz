@@ -301,7 +301,7 @@ const generalFitness = {
     },
     {
       level: 20,
-      label: "Your general fitness are above average."
+      label: "Your general fitness is above average."
     },
     {
       level: 23,
