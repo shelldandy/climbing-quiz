@@ -388,12 +388,91 @@ const climbingFitness = {
   ]
 }
 
+const injuryRisk = {
+  label: "Injury Risk",
+  questions: [
+    {
+      question: "I perform a warm-up activity and some stretching before climbing or training",
+      options: [
+        "seldom or never",
+        "occasionally",
+        "about half the time",
+        "often",
+        "almost always",
+      ]
+    },
+    {
+      question: "I climb hard on three or more consecutive days.",
+      options: [
+        "every week",
+        "often",
+        "a couple times a month",
+        "once per month",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "When climbing, I experience elbow, shoulder, or finger pain.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "I engage in regular training of the antagonists and stabilizer muscles.",
+      options: [
+        "never",
+        "infrequently",
+        "a few times a month",
+        "once or twice a week",
+        "tweice a week, religiously",
+      ]
+    },
+    {
+      question: "I stop climbing or end a workout prematurely if I experience unusual joint or tendon pain.",
+      options: [
+        "never",
+        "infrequently",
+        "about half the time",
+        "often",
+        "always",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "Your are at high risk for an injury while training or climbing. Review each question to determine what actions you can take to lower your risk."
+    },
+    {
+      level: 10,
+      label: "You are at above-average risk for overuse or acute climbing injuries. Strive to be more proactive with injury prevention."
+    },
+    {
+      level: 15,
+      label: "You are at near-average risk of a climbing injury. Just a small commitment to warm-up activities, planned recovery, and anatagonist/stabilizer muscle training will significantly lower your risk."
+    },
+    {
+      level: 20,
+      label: "Kudos to you, too, for doing what it takes to reduce injury risk."
+    },
+    {
+      level: 23,
+      label: "Congratulations! Your injury rist awareness and risk mitigation practices make you less susceptible than average to a climbing injury."
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
   technicalSkills,
   mentalSkills,
   generalFitness,
   climbingFitness,
+  injuryRisk,
 ]
 
 export default quizData
