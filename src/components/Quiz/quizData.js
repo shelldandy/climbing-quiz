@@ -232,10 +232,89 @@ const mentalSkills = {
   ]
 }
 
+const generalFitness = {
+  label: "General Fitness",
+  questions: [
+    {
+      question: "How many pounds (body fat or excessively bulky muscles) do you estimate you are from your ideal climbing weight?",
+      options: [
+        "more than 20",
+        "10-20",
+        "5-10",
+        "just a few",
+        "zero",
+      ]
+    },
+    {
+      question: "How far could you jog (modest-paced steady running) without stopping?",
+      options: [
+        "less than 0.5 mile",
+        "0.5 mile to 1 mile",
+        "1 to 2 miles",
+        "3 to 5 miles",
+        "more than 5 miles",
+      ]
+    },
+    {
+      question: "How many pull-ups can you do in a single set?",
+      options: [
+        "women: 0-1, men: 0-4",
+        "women: 2-4, men: 5-9",
+        "women: 5-9, men: 10-19",
+        "women: 10-20, men: 20-30",
+        "women: 21+, men: 31+",
+      ]
+    },
+    {
+      question: "How many push-ups can you do in a single set?",
+      options: [
+        "women: 0-2, men: 0-4",
+        "women: 3-6, men: 5-15",
+        "women: 7-15, men: 16-25",
+        "women: 16-25, men: 26-40",
+        "women: 25+, men: 41+",
+      ]
+    },
+    {
+      question: "How many abdominal crunches can you do in a single set?",
+      options: [
+        "Fewer than 10",
+        "10-20",
+        "21-49",
+        "50-75",
+        "76+",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "You possess poor general fitness. It's paramount that you improve in this area before engaging in a regular schedule of climbing. See chapter 4"
+    },
+    {
+      level: 10,
+      label: "Your general fitness is below average and is undoubtedly limiting your climbing ability. See chapter 4"
+    },
+    {
+      level: 15,
+      label: "Your general fitness is near average. Improvement in this area will facilitate better movement and improved stamina and reduce injury risk"
+    },
+    {
+      level: 20,
+      label: "Your general fitness are above average."
+    },
+    {
+      level: 23,
+      label: "You possess excellent general fitness!"
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
   technicalSkills,
   mentalSkills,
+  generalFitness,
 ]
 
 export default quizData
