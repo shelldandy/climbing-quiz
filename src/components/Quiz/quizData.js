@@ -76,8 +76,87 @@ const climbingExperience = {
   ]
 }
 
+const technicalSkills = {
+  label: "Technical Skills",
+  questions: [
+    {
+      question: "My footwork and overall technique deteriorate during the hardest part of a climb.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "Cracks, slabs and roofs fell hard for the grade compared with a similarly graded face climb.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "I have difficulty finding mid-route rest positions and shakeouts.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "On the typical climb, I feel like my body weight is hanging on my arms.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "On overhanging routes and roofs, I have difficulty finding the optimal body position or keeping my feet from cutting loose",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "As a novice climber you possess tremendous potential to improve. A regular schedule of climbing and a willingness to stretch your boundaries will yield rapid gains in ability."
+    },
+    {
+      level: 10,
+      label: "Your experience is limited or narrow in scope, but huge gains await you given a commitment to climb more often and explore new types of climbing."
+    },
+    {
+      level: 15,
+      label: "Your experience is average."
+    },
+    {
+      level: 20,
+      label: "Your experience is above average."
+    },
+    {
+      level: 23,
+      label: "You are well on your way to mastery!"
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
+  technicalSkills
 ]
 
 export default quizData
