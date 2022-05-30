@@ -310,11 +310,90 @@ const generalFitness = {
   ]
 }
 
+const climbingFitness = {
+  label: "Climbing-Specific Fitness",
+  questions: [
+    {
+      question: "On overhanging routes with large holds, I pump out quickly and need to hang on the rope.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "I have difficulty hanging on small, neccesary-to-use holds.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "I find it difficult to hold a lock-off with one arm when I let go to advance the other hand.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "Given a marginal mid-climb rest, I can shake out and recover enough to complete the route.",
+      options: [
+        "seldom or never",
+        "occasionally",
+        "about half the time",
+        "often",
+        "almost always",
+      ]
+    },
+    {
+      question: "My maximum bouldering ability is:",
+      options: [
+        "V0-V1",
+        "V2-V3",
+        "V4-V6",
+        "V7-V9",
+        "V10+",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "You possess a poor level of conditioning. Engage in a general training program for at least a year before initiating a climbing-specific training program."
+    },
+    {
+      level: 10,
+      label: "Your climbing-specific fitness is a major constraint in climbing performance. If you are an intermediate or advanced climber, vow to increase you commitment to this type of training. If you are a novice, however, continue general training for another year or so before beginning climbing-specific training."
+    },
+    {
+      level: 15,
+      label: "Your climbing-specific fitness is near average; however, a program of targeted training will quickly elevate you to the next level."
+    },
+    {
+      level: 20,
+      label: "Your climbing-specific fitness is above average."
+    },
+    {
+      level: 23,
+      label: "You possess excellent climbing-specific fitness!"
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
   technicalSkills,
   mentalSkills,
   generalFitness,
+  climbingFitness,
 ]
 
 export default quizData
