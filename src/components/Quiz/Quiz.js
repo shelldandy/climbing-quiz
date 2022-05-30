@@ -34,7 +34,17 @@ const Quiz = ({ quizData }) => {
 };
 
 Quiz.propTypes = {
-  quizData: Proptypes.array,
+  quizData: Proptypes.arrayOf(Proptypes.shape({
+    label: Proptypes.string.isRequired,
+    questions: Proptypes.arrayOf(Proptypes.shape({
+      question: Proptypes.string.isRequired,
+      options: Proptypes.arrayOf(Proptypes.string).isRequired,
+    })),
+    analysis: Proptypes.arrayOf(Proptypes.shape({
+      level: Proptypes.number.isRequired,
+      label: Proptypes.string.isRequired,
+    }))
+  })),
 };
 
 Quiz.defaultProps = {
