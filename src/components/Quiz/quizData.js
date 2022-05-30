@@ -133,23 +133,23 @@ const technicalSkills = {
   analysis: [
     {
       level: 5,
-      label: "As a novice climber you possess tremendous potential to improve. A regular schedule of climbing and a willingness to stretch your boundaries will yield rapid gains in ability."
+      label: "You are at the beginning of the learning curve. With a consistent schedule of climbing, you will see rapid gains in ability."
     },
     {
       level: 10,
-      label: "Your experience is limited or narrow in scope, but huge gains await you given a commitment to climb more often and explore new types of climbing."
+      label: "You possess some fundamental flaws in climbing technique. Make improving your technique a top priority. Consider employing a coach to provide technical instruction and tips for improvement."
     },
     {
       level: 15,
-      label: "Your experience is average."
+      label: "Your technical skills are near average; however, the next level is attainable given a focused effort to improve in weak areas."
     },
     {
       level: 20,
-      label: "Your experience is above average."
+      label: "Your technical skills are above average."
     },
     {
       level: 23,
-      label: "You are well on your way to mastery!"
+      label: "You possess excellent technical skills!"
     },
   ]
 }
