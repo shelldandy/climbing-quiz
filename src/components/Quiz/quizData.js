@@ -154,9 +154,88 @@ const technicalSkills = {
   ]
 }
 
+const mentalSkills = {
+  label: "Mental Skills",
+  questions: [
+    {
+      question: "I visualize myself successfully climbing the route before I leave the ground.",
+      options: [
+        "seldom or never",
+        "occasionally",
+        "about half the time",
+        "often",
+        "almost always",
+      ]
+    },
+    {
+      question: "I get anxious, tight, and hesistant as I climb into crux sequences.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "I miss hidden holds or blow a known sequence.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "I make excuses for why I might fail on a route before I even begin to climb.",
+      options: [
+        "almost always",
+        "often",
+        "about half the time",
+        "occasionally",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "When lead climbing a safe route, I push myself to the complete limit, and if I fall, I fall trying.",
+      options: [
+        "seldom or never",
+        "occasionally",
+        "about half the time",
+        "often",
+        "almost always",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "Your weak mental skills will improve rapidly given a regular schedule of climbing and a willingness to stretch your boundaries and challenge your fears."
+    },
+    {
+      level: 10,
+      label: "Your limited mental skills are an Achilles heel that's sabotaging your climbing performance. Desire and discipline to improve in this area will yield huge breakthroughs in climbing ability."
+    },
+    {
+      level: 15,
+      label: "Your mental skills are near average; however, significant gains are attainable given a commitment to mental training."
+    },
+    {
+      level: 20,
+      label: "Your mental skills are above average."
+    },
+    {
+      level: 23,
+      label: "You possess excellent mental skills!"
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
-  technicalSkills
+  technicalSkills,
+  mentalSkills,
 ]
 
 export default quizData
