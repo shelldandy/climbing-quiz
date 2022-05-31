@@ -544,6 +544,84 @@ const nutritionalHabits = {
   ]
 }
 
+const lifestyleAndDiscipline = {
+  label: "Lifestyle and Discipline",
+  questions: [
+    {
+      question: "How many days per week do you engage en a physical activity such as climbing, training or another sport?",
+      options: [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+      ]
+    },
+    {
+      question: "On average, how many hours of sleep do you get each night?",
+      options: [
+        "less than five",
+        "five to six",
+        "six to seven",
+        "seven to eight",
+        "more than eight",
+      ]
+    },
+    {
+      question: "How often do you pig out eating and drinking with little restraint?",
+      options: [
+        "three or more days per week",
+        "twice per week",
+        "once per week",
+        "once or twice per month",
+        "seldom or never",
+      ]
+    },
+    {
+      question: "Do you smoke?",
+      options: [
+        "yes, a half pack or more per day",
+        "yes, but only a few smokes per day",
+        "yes, but not daily - only a few times per week",
+        "I quit",
+        "I've never smoked",
+      ]
+    },
+    {
+      question: "When you set goals or begin a workout program, how often do you follow through to successful completion?",
+      options: [
+        "seldom",
+        "occasionally",
+        "about half the time",
+        "often",
+        "almost always",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "Your lifestyle and lack of discipline are definitely holding you back. Determine your priorities, and make lifestyle changes needed to elevate your score to 15 or above"
+    },
+    {
+      level: 10,
+      label: "Your below-average discipline is a constraint on your climbing. If you are serious about climbing better, resolve to adjust your lifestyle and subordinate less important activities."
+    },
+    {
+      level: 15,
+      label: "Your discipline is near average. Try to identify one or two areas in which you can strive for improvement."
+    },
+    {
+      level: 20,
+      label: "Your discipline is above average and a real asset to your climbing."
+    },
+    {
+      level: 23,
+      label: "Your are a highly disciplined individual and well on your way to climbing mastery."
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
   technicalSkills,
@@ -552,6 +630,7 @@ const quizData = [
   climbingFitness,
   injuryRisk,
   nutritionalHabits,
+  lifestyleAndDiscipline,
 ]
 
 export default quizData
