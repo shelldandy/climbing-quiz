@@ -466,6 +466,84 @@ const injuryRisk = {
   ]
 }
 
+const nutritionalHabits = {
+  label: "Nutritional Habits",
+  questions: [
+    {
+      question: "How often do you eat breakfast?",
+      options: [
+        "never",
+        "weekends only",
+        "three days a week",
+        "five days a week",
+        "every day",
+      ]
+    },
+    {
+      question: "How often do you eat fast food or fried food?",
+      options: [
+        "four or more days per week",
+        "two or three days per week",
+        "once a week",
+        "once or twice a month",
+        "less than once a month",
+      ]
+    },
+    {
+      question: "On average, how soon after a workout or the end of your climbing day do you consume some carbohydrate and protein?",
+      options: [
+        "more than 3 hours",
+        "2 to 3 hours",
+        "1 to 2 hours",
+        "30 minutes to 1 hour",
+        "within 30 minutes",
+      ]
+    },
+    {
+      question: "How many servings of fruits and vegetables do you consume per day?",
+      options: [
+        "zero or one",
+        "two",
+        "three",
+        "four",
+        "five or more",
+      ]
+    },
+    {
+      question: "How often do you plan out your meals ahead of time for the purpose of eating for performance and optimal recovery?",
+      options: [
+        "seldom or never",
+        "once per week",
+        "two or three days per week",
+        "four to six days per week",
+        "every day",
+      ]
+    },
+  ],
+  analysis: [
+    {
+      level: 5,
+      label: "Your poor nutritional habits are both a health risk and a constraint on climbing performance. Make it a priority to make permanent changes in this area - it will improve your quality of life as well as your climbing."
+    },
+    {
+      level: 10,
+      label: "Your diet is below average. Strive to eliminate this constraint on your climbing performance and recovery ability by improving dietary surveillance throughout the week."
+    },
+    {
+      level: 15,
+      label: "Your nutrition is near average, but improving your habits will boost your energy, stamina, and recovery times."
+    },
+    {
+      level: 20,
+      label: "Your nutritional habits are above average."
+    },
+    {
+      level: 23,
+      label: "You possess excellent nutritional habits!"
+    },
+  ]
+}
+
 const quizData = [
   climbingExperience,
   technicalSkills,
@@ -473,6 +551,7 @@ const quizData = [
   generalFitness,
   climbingFitness,
   injuryRisk,
+  nutritionalHabits,
 ]
 
 export default quizData
