@@ -20,7 +20,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Epilogue', 'Cormorant']
+          families: ['Epilogue&display=swap', 'Cormorant&display=swap']
         }
       }
     }
