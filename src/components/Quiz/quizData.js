@@ -1,4 +1,5 @@
 const climbingExperience = {
+  id: "climbing-experience",
   label: "Climbing Experience",
   questions: [
     {
@@ -77,6 +78,7 @@ const climbingExperience = {
 }
 
 const technicalSkills = {
+  id: "technical-skills",
   label: "Technical Skills",
   questions: [
     {
@@ -155,6 +157,7 @@ const technicalSkills = {
 }
 
 const mentalSkills = {
+  id: "mental-skills",
   label: "Mental Skills",
   questions: [
     {
@@ -233,6 +236,7 @@ const mentalSkills = {
 }
 
 const generalFitness = {
+  id: "general-fitness",
   label: "General Fitness",
   questions: [
     {
@@ -311,6 +315,7 @@ const generalFitness = {
 }
 
 const climbingFitness = {
+  id: "climbing-fitness",
   label: "Climbing-Specific Fitness",
   questions: [
     {
@@ -389,6 +394,7 @@ const climbingFitness = {
 }
 
 const injuryRisk = {
+  id: "injury-risk",
   label: "Injury Risk",
   questions: [
     {
@@ -467,6 +473,7 @@ const injuryRisk = {
 }
 
 const nutritionalHabits = {
+  id: "nutritional-habits",
   label: "Nutritional Habits",
   questions: [
     {
@@ -545,6 +552,7 @@ const nutritionalHabits = {
 }
 
 const lifestyleAndDiscipline = {
+  id: "lifestyle-and-discipline",
   label: "Lifestyle and Discipline",
   questions: [
     {

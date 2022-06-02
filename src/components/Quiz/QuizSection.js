@@ -1,28 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react'
+import Question from './Question'
 
-const QuizSection = ({ label, questions }) => {
+const QuizSection = ({ id, label, questions }) => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const questionProps = {
+    ...questions[currentQuestion],
+    name: `${id}__${currentQuestion}`
+  };
+
   return (
-        <div>
+        <div id={id}>
           <h2>{label}</h2>
-          <form>
-            {questions.map(({ question, options, currentSection }, qdx) => {
-              const name = `${currentSection}__${qdx}`;
-              return (
-              <div key={`${question}_${qdx}`}>
-                <h3>{question}</h3>
-                {options.map((option, odx) => {
-                const optionName = `${currentSection}__${qdx}--${odx}`;
-                  return (
-                    <div key={`${option}_${odx}`}>
-                      <label htmlFor={optionName}>{option}</label>
-                      <input type="radio" value={odx+1} name={name} id={optionName} />
-                    </div>
-                )
-                })}
-              </div>
-            )
-            })}
-          </form>
+            <Question {...questionProps} />
         </div>
   );
 };

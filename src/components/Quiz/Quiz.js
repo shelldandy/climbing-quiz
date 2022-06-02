@@ -4,8 +4,8 @@ import quizData from './quizData'
 import QuizSection from './QuizSection'
 
 const Quiz = ({ quizData }) => {
+  const totalSections = quizData.length;
   const [currentSection, setCurrentSection] = useState(0);
-
   const quizProps = quizData[currentSection];
   return (
     <section>
