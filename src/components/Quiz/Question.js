@@ -8,8 +8,8 @@ const Question = ({ question, options, name }) => {
         const optionName = `${name}--${odx}`;
         return (
           <div key={`${option}_${odx}`}>
-            <label htmlFor={optionName}>{option}</label>
             <input type="radio" value={odx+1} name={name} id={optionName} />
+            <label htmlFor={optionName}>{option}</label>
           </div>
         )
       })}
