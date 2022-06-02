@@ -8,8 +8,16 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Cormorant", ${systemFonts};
   }
 
+  body {
+    min-height: 100vh;
+    background: #E9D5CA;
+    color: #363062;
+    padding: 1em;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: "Epilogue", ${systemFonts};
+    color: #A13333;
   }
 
   *, *::before, *::after {
