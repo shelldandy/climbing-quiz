@@ -4,13 +4,29 @@ import quizData from './quizData'
 import QuizSection from './QuizSection'
 
 const Quiz = ({ quizData }) => {
-  const totalSections = quizData.length;
+  const [scores, setScores] = useState(quizData.map(s => ({
+    ...s,
+    score: 0,
+  })))
+  const totalSections = scores.length;
   const [currentSection, setCurrentSection] = useState(0);
-  const quizProps = quizData[currentSection];
+  const quizProps = scores[currentSection];
+
+  const advanceSection = (id, score) => {
+    if (currentSection > totalSections) {
+      setCurrentSection(section => section + 1);
+      setScores(prevScores => {
+        const sectionId = prevScores.findIndex(s => s.id === id);
+        if (sectionId) prevScores[sectionId].score = score;
+        return prevScores;
+      })
+    }
+  };
+
   return (
-    <section>
-      <QuizSection {...quizProps} currentSection={currentSection} />
-    </section>
+    <>
+      <QuizSection {...quizProps} currentSection={currentSection} advanceSection={advanceSection} />
+    </>
   );
 };
 
