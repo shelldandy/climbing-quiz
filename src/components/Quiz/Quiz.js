@@ -12,12 +12,11 @@ const Quiz = ({ quizData }) => {
   const [currentSection, setCurrentSection] = useState(0);
   const quizProps = scores[currentSection];
 
-  const advanceSection = (id, score) => {
+  const advanceSection = score => {
     if (currentSection > totalSections) {
       setCurrentSection(section => section + 1);
       setScores(prevScores => {
-        const sectionId = prevScores.findIndex(s => s.id === id);
-        if (sectionId) prevScores[sectionId].score = score;
+        prevScores[currentSection].score = score;
         return prevScores;
       })
     }
