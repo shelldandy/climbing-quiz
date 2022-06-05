@@ -13,18 +13,21 @@ const Quiz = ({ quizData }) => {
   const quizProps = scores[currentSection];
 
   const advanceSection = score => {
-    if (currentSection > totalSections) {
-      setCurrentSection(section => section + 1);
+    if (currentSection + 1 <= totalSections) {
       setScores(prevScores => {
-        prevScores[currentSection].score = score;
+        prevScores[currentSection].score = Number(score);
         return prevScores;
       })
+      setCurrentSection(section => section + 1);
     }
   };
 
   return (
     <>
       <QuizSection {...quizProps} currentSection={currentSection} advanceSection={advanceSection} />
+      {scores.map(s => (
+        <p key={s.id}>{s.label} - {s.score}</p>
+      ))}
     </>
   );
 };
