@@ -12,19 +12,22 @@ const Quiz = ({ quizData }) => {
   const [currentSection, setCurrentSection] = useState(0);
   const quizProps = scores[currentSection];
 
-  const advanceSection = score => {
-    if (currentSection + 1 <= totalSections) {
+  const updateSectionScore = score => {
       setScores(prevScores => {
-        prevScores[currentSection].score = Number(score);
+        prevScores[currentSection].score = prevScores[currentSection].score + score;
         return prevScores;
       })
+  }
+
+  const advanceSection = () => {
+    if (currentSection + 1 <= totalSections) {
       setCurrentSection(section => section + 1);
     }
   };
 
   return (
     <>
-      <QuizSection {...quizProps} currentSection={currentSection} advanceSection={advanceSection} />
+      <QuizSection {...quizProps} currentSection={currentSection} advanceSection={advanceSection} updateSectionScore={updateSectionScore} />
       {scores.map(s => (
         <p key={s.id}>{s.label} - {s.score}</p>
       ))}

@@ -8,8 +8,8 @@ const Question = ({ question, options, name, onOptionClick, currentQuestion }) =
         const optionName = `${name}--${odx}`;
         return (
           <div key={`${option}_${odx}`}>
-            <input type="radio" value={odx+1} name={name} id={optionName} onChange={onOptionClick} />
-            <label htmlFor={optionName}>{option}</label>
+            <input type="radio" value={odx+1} name={name} id={optionName} onClick={onOptionClick(odx + 1)} />
+            <label htmlFor={optionName} onClick={onOptionClick(odx + 1)}>{option}</label>
           </div>
         )
       })}

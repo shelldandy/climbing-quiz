@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import Question from './Question'
 
-const QuizSection = ({ id, label, questions, advanceSection }) => {
+const QuizSection = ({ id, label, questions, advanceSection, updateSectionScore }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
 
-  const onOptionClick = e => {
-    const { value } = e.target;
-    setScore(prevScore => prevScore += Number(value));
+  const onOptionClick = value => () => {
+    updateSectionScore(value)
     // if last question next section...
     if (currentQuestion + 1 >= questions.length) {
-      advanceSection(score);
-      setScore(0)
+      advanceSection();
       setCurrentQuestion(0);
     } else {
       setCurrentQuestion(q => q + 1)
